@@ -1,7 +1,7 @@
 #define pot A0
 #define LED 13
 
-int value = 0;
+float value = 0;
 
 void setup() {
   pinMode(LED,OUTPUT);
@@ -10,12 +10,12 @@ void setup() {
 }
 
 void loop() {
-  value = analogRead(pot);
-  Serial.print("Valor ADC:");
+  value = 5*analogRead(pot)/1024;
+  
+  Serial.print("Voltaje:");
   Serial.println(value);
   delay(100);
-  if(value>614){
-    Serial.print("Estoy en el if");
+  if(value>3){
     digitalWrite(LED,HIGH);;
   }// if
   else{
