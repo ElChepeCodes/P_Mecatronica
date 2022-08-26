@@ -14,9 +14,9 @@ void loop() {
   value = analogRead(pot);
   brillo = value/1024*255;
   
-  Serial.print("Brillo:");
-  Serial.println(brillo);
-  delay(100);
+  Serial.print("%Brillo:");
+  Serial.println(brillo*100/255);
+  //delay(1000);
   analogWrite(LED,brillo);
 
 }
