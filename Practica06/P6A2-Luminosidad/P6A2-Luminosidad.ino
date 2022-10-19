@@ -14,6 +14,7 @@ void setup() {
 void loop() {
 
   value = analogRead(pot);
+  Serial.println(value);
   brillo = 255-(value/1024*255);
   if (brillo < 20){
     analogWrite(LED, 0);
@@ -21,6 +22,7 @@ void loop() {
   else
    if(brillo > 80)
     analogWrite(LED,255);
+    
   else{
   
   Serial.print("%Brillo:");
