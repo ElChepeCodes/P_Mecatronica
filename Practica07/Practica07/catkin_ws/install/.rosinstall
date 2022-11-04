@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/chepe/catkin_ws/install/setup.sh
